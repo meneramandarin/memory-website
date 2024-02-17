@@ -1,111 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memory by Play by Ear</title>
-<style>
-  body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #023020;
-  }
-  .header-container {
-    padding-top: 6%;
-    padding-left: 0.5%; 
-  }
-  .button-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    position: absolute;
-    width: 100%;
-    top: 60%; 
-  }
-  .input-field,
-.button {
-  box-sizing: border-box;
-  width: 30%; 
-  margin-bottom: 20px; 
-}
-  .footer-container {
-  position: absolute;
-  left: 0;
-  right: 1%; 
-  bottom: 1%; 
-  text-align: right;
-  }
-  h1 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 13em; 
-    color: #FFEBCD;
-    margin: 0;
-    font-weight: normal;
-  }
-  .button {
-    background: transparent;
-    border: 2px solid #FFEBCD;
-    border-radius: 40px;
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-    font-size: 3em; 
-    color: #FFEBCD;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; 
-  }
-  .button:hover {
-  background-color: #FFEBCD; 
-  color: #023020; 
-}
-  .input-field {
-    background: #023020; 
-    border: 2px solid #FFEBCD; 
-    border-radius: 40px; 
-    padding: 10px 20px; 
-    font-family: Arial, sans-serif;
-    font-size: 3em;
-    color: #FFEBCD; 
-    cursor: text;
-}
-  .made-by {
-  font-family: Arial, sans-serif;
-  color: #FFEBCD;
-  font-size: 1em;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Memory by Play by Ear</title>
+
+  <style>
+    /* Main css start  */
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      background-color: #023020;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 100vh;
+      padding: 0 50px;
+    }
+
+    .button-container {
+      margin: 0 auto;
+      margin-bottom: 0px;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 500;
+      color: #FFEBCD;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 200px;
+    }
+
+    .button {
+      background-color: transparent;
+      border: 2px solid #FFEBCD;
+      color: #FFEBCD;
+      font-weight: 500;
+      font-size: 45px;
+      border-radius: 50px;
+      width: 450px;
+      padding: 12px 20px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #FFEBCD;
+      color: #023020;
+    }
+
+    .input-field {
+      margin-bottom: 20px;
+      background-color: transparent;
+      border: 2px solid #FFEBCD;
+      color: #FFEBCD;
+      font-weight: 500;
+      font-size: 45px;
+      border-radius: 50px;
+      width: 410px;
+      padding: 12px 20px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+
+    .footer-container {
+      text-align: end;
+    }
+
+    .made-by {
+      color: #FFEBCD;
+      border: 0;
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Main css end  */
+
+    /* responsive css start  */
+    /*Extra small devices (portrait phones, less than 576px)*/
+    @media (max-width: 575.98px) {
+      main {
+        background-color: #023020;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 10px;
+      }
+
+      h1 {
+        font-size: 80px;
+      }
+
+      .button {
+        font-size: 25px;
+        border-radius: 50px;
+        width: 100%;
+        padding: 12px 20px;
+      }
+
+      .input-field {
+        font-size: 25px;
+        width: 89%;
+        padding: 12px 20px;
+        padding-right: 10px;
+      }
+    }
+
+    /*Small devices (landscape phones, 576px and up)*/
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      main {
+        background-color: #023020;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 50px;
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+
+      .button {
+        font-size: 35px;
+        border-radius: 50px;
+        width: 400px;
+        padding: 12px 20px;
+      }
+
+      .input-field {
+        font-size: 35px;
+        width: 355px;
+        padding: 12px 20px;
+      }
+    }
+
+    /*Medium devices (tablets, 768px and up)*/
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      main {
+        background-color: #023020;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 50px;
+      }
+
+      h1 {
+        font-size: 120px;
+      }
+
+      .button {
+        font-size: 35px;
+        border-radius: 50px;
+        width: 400px;
+        padding: 12px 20px;
+      }
+
+      .input-field {
+        font-size: 35px;
+        width: 355px;
+        padding: 12px 20px;
+      }
+
+    }
+
+    /*Large devices (desktops, 992px and up)*/
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      h1 {
+        font-size: 150px;
+      }
+    }
+
+    /* responsive css end */
+  </style>
 </head>
+
 <body>
-  <div class="header-container">
-    <h1>Memory</h1>
-  <div class="button-container">
+
+  <main>
+    <div class="header-container">
+      <h1>Memory</h1>
+    </div>
+
+    <div class="button-container">
       <button class="button" id="accessButton">Get early access</button>
       <input type="text" id="emailInput" class="input-field" style="display: none;" placeholder="Your email">
       <button class="button" id="submitBtn" style="display: none;">Submit</button>
-  </div>
-  <script>
-    document.getElementById('accessButton').addEventListener('click', function() {
-    // Hide the 'Get early access' button
-    this.style.display = 'none';
-    
-    // Show the input field and focus on it
-    var input = document.getElementById('emailInput');
-    input.style.display = 'block';
-    input.focus();
-    
-    // Show the submit button
-    var submitBtn = document.getElementById('submitBtn');
-    submitBtn.style.display = 'block';
-    });
-  </script>
-  <script src="form-handler.js"></script>
-  <div class="footer-container">
-    <button class="made-by" onclick="window.location.href='http://www.playbyear.xyz'">Made by Play by Ear.</button>
-  </div>
+    </div>
+
+    <script>
+      document.getElementById('accessButton').addEventListener('click', function () {
+        // Hide the 'Get early access' button
+        this.style.display = 'none';
+
+        // Show the input field and focus on it
+        var input = document.getElementById('emailInput');
+        input.style.display = 'block';
+        input.focus();
+
+        // Show the submit button
+        var submitBtn = document.getElementById('submitBtn');
+        submitBtn.style.display = 'block';
+      });
+    </script>
+    <script src="form-handler.js"></script>
+
+    <div class="footer-container">
+      <button class="made-by" onclick="window.location.href='http://www.playbyear.xyz'">Made by Play by Ear.</button>
+    </div>
+
+  </main>
+
 </body>
+
 </html>
