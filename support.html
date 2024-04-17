@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #023020;
+            color: #FFEBCD;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            min-height: 100vh;
+            padding: 0 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .input-field {
+            margin-bottom: 20px;
+            background-color: transparent;
+            border: 2px solid #FFEBCD;
+            color: #FFEBCD;
+            font-weight: 500;
+            font-size: 20px;
+            border-radius: 50px;
+            padding: 12px 20px;
+        }
+
+        .submit-button {
+            background-color: transparent;
+            border: 2px solid #FFEBCD;
+            color: #FFEBCD;
+            font-weight: 500;
+            font-size: 20px;
+            border-radius: 50px;
+            width: 150px;
+            padding: 12px 20px;
+            transition: 0.3s;
+            cursor: pointer;
+
+            display: block;      
+            margin: 0 auto; 
+        }
+
+        .submit-button:hover {
+            background-color: #FFEBCD;
+            color: #023020;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Get Support with Memo</h1>
+    <form action="https://formspree.io/f/xpzvkzdd" method="POST">
+        <input type="text" class="input-field" name="name" placeholder="Name" required>
+        <input type="email" class="input-field" name="email" placeholder="Email" required>
+        <textarea class="input-field" name="request" placeholder="Request" required></textarea>
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</body>
+</html>
